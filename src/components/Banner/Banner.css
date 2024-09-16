@@ -1,0 +1,27 @@
+.banner {
+  background:  linear-gradient(180deg, #45fff6d4, #131b2d 99%);
+    color: #333;
+    /* padding: 20px; */
+    text-align: center;
+    padding-top: 200px;
+  }
+
+  
+  
+  .banner h1 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+  }
+  
+  .banner p {
+    font-size: 1.2rem;
+  }
+  .BannerLottieContainer {
+    display: flex;
+    justify-content: center;
+  }
+.BannerLottie{
+    width: 400px;
+    height: 400px;
+    /* padding: 0 500px; */
+}  

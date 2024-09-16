@@ -1,0 +1,79 @@
+.sell-total-container{
+    background: #373737;
+    /* height: 100vh; */
+    padding-top: 20px;
+    padding-bottom: 10px; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+}
+.sell-bid-container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background: linear-gradient(180deg, #ffc400, #ff1818d4 90%);
+    padding-top: 50px;
+    width: 100%;
+
+    
+  }
+  
+  .sell-form{
+    display: flex;
+    flex-direction: column;
+    padding-right: 20px;
+  }
+  
+  .form-group {
+    margin-bottom: 20px;
+  }
+  
+  label {
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  
+  input[type='number'],
+  textarea,
+  input[type='file'] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+  
+  .image-preview {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+  }
+  
+  .preview-image {
+    max-width: 100px;
+    height: auto;
+    margin-right: 10px;
+    margin-bottom: 10px;
+  }
+  
+ .sell-form button {
+    padding: 10px 20px;
+    background-color: #d172fd;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  .sell-form button:hover {
+    background-color: #65ccff;
+  }
+ 
+  .selllottie{
+    width: 500px;
+  }

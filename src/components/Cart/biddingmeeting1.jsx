@@ -1,0 +1,138 @@
+import React, { useState, useEffect } from 'react';
+import './Cart.css';
+import Lottie from "lottie-react";
+import MeetingLottie from '../../assets/MeetingLottie.json';
+import { useParams } from 'react-router-dom';
+import { getFirestore, collection, getDocs, query } from 'firebase/firestore';
+import { getAuth } from "firebase/auth";
+import ChatPage from '../../components/ChattingPage/ChattingPage';
+
+const BiddingMeeting1 = () => { // Component name starts with uppercase
+  const [adminPrice, setAdminPrice] = useState(0);
+  const [userBids, setUserBids] = useState([]);
+  const [currentBid, setCurrentBid] = useState(0);
+  const [timer, setTimer] = useState(30); // 30 seconds timer for demonstration
+  const [meetingActive, setMeetingActive] = useState(true);
+  const [winner, setWinner] = useState('');
+  const [messages, setMessages] = useState([]);
+  const [currentItem, setCurrentItem] = useState(null);
+
+  const { Bidid } = useParams();
+  const db = getFirestore();
+  const auth = getAuth();
+  let timerInterval; // Define timerInterval
+
+  useEffect(() => {
+    const fetchItem = async () => {
+      const user = auth.currentUser;
+      if (user) {
+        const q = query(collection(db, 'bids', user.uid, 'userBids'));
+        const querySnapshot = await getDocs(q);
+        const items = querySnapshot.docs.map(doc => ({ id: doc.id, ...doc.data() }));
+        const item = items.find(i => i.id === Bidid);
+        if (item) {
+          setCurrentItem(item);
+        } else {
+          console.error('Item not found with ID:', Bidid);
+        }
+      }
+    };
+  
+    fetchItem();
+  }, [Bidid, auth, db]);
+  
+
+  useEffect(() => {
+    if (timer === 0) {
+      clearInterval(timerInterval);
+      setMeetingActive(false);
+      determineWinner();
+    }
+  }, [timer]);
+
+  useEffect(() => {
+    if (meetingActive) {
+      timerInterval = setInterval(() => {
+        setTimer(prevTimer => prevTimer - 1);
+      }, 1000);
+    }
+    return () => clearInterval(timerInterval); // Cleanup on component unmount
+  }, [meetingActive]);
+
+  const determineWinner = () => {
+    const winningBid = Math.max(...userBids.map(bid => bid.amount));
+    const winningUser = userBids.find(bid => bid.amount === winningBid)?.user;
+    setWinner(winningUser);
+  };
+
+  const handleBid = (bidAmount) => {
+    if (bidAmount > currentBid) {
+      setCurrentBid(bidAmount);
+      const bidInfo = { user: 'User', amount: bidAmount };
+      setUserBids(prevBids => [...prevBids, bidInfo]);
+      addMessage({ text: `User bid $${bidAmount}`, sender: 'System' });
+    }
+  };
+
+  const formatTime = (time) => {
+    const minutes = Math.floor(time / 60);
+    const seconds = time % 60;
+    return `${minutes}:${seconds < 10 ? '0' : ''}${seconds}`;
+  };
+
+  const handleEndMeeting = () => {
+    setMeetingActive(false);
+    determineWinner();
+  };
+
+  const addMessage = (message) => {
+    setMessages(prevMessages => [...prevMessages, message]);
+  };
+
+  return (
+    <div className="bidding-meeting-container">
+      <div className="meeting-left">
+        <div className="meeting-top">
+          <h1>Bidding Meeting</h1>
+          <Lottie loop={true} animationData={MeetingLottie} />
+        </div>
+        <div className="meeting-right">
+          {currentItem ? (
+            <>
+              <div className="item-details">
+                <h2>Item: {currentItem.itemName}</h2>
+                <img src={currentItem.images[0]} alt={currentItem.itemName} />
+                <h2 className="admin-price">Admin Price: {adminPrice}</h2>
+                <h2 className="current-bid">Current Bid: {currentBid}</h2>
+              </div>
+              {meetingActive ? (
+                <>
+                  <h3>Timer: {formatTime(timer)}</h3>
+                  <div className="meeting-bid-info">
+                    {userBids.map((bid, index) => (
+                      <p key={index} className="meeting-bid-item">{bid.user} bid ${bid.amount}</p>
+                    ))}
+                  </div>
+                  <button onClick={() => handleBid(currentBid + 10)}>Place Bid</button>
+                </>
+              ) : (
+                <div>
+                  <p>Meeting has ended!</p>
+                  <p>{winner ? `${winner} has won the bid!` : 'No bids were placed.'}</p>
+                </div>
+              )}
+              {meetingActive && timer === 0 && <div className="overlay2" onClick={handleEndMeeting}></div>}
+            </>
+          ) : (
+            <p>Item not found!</p>
+          )}
+        </div>
+      </div>
+      <div className="chat-container">
+        <ChatPage messages={messages} addMessage={addMessage} />
+      </div>
+    </div>
+  );
+};
+
+export default BiddingMeeting1;

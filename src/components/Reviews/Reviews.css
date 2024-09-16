@@ -1,0 +1,80 @@
+.review-background{
+    background: #131b2d;
+}
+.review-background h3{
+    color: #f8c8c8;
+    padding: 10px 650px;
+    font-size: 45px;
+}
+
+.review-container{
+    width: 3/4;
+    margin: auto;
+    padding: 50px 100px;
+    
+}
+
+.review-container2{
+    margin-top: 20;
+   
+    
+}
+.card-container{
+    background: #ff9999;
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    transition: 0.5s;
+
+  
+    
+}
+.card-container:hover{
+    background: #5af45d;
+
+}
+.review-image img{
+    border-radius: 100%;
+    height: 300px;
+    width: 300px;
+    transition: 0.5s;
+    filter: grayscale(0%);
+}
+.review-image img:hover{
+    transform: scale(1.05);
+    filter: grayscale(90%);
+}
+.review-image{
+    background: #41b6ff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 350px;
+    transition: 0.5s;
+    
+} 
+.review-image:hover{
+    background: #ff4444;
+      
+}
+.review-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 10px 10px;
+}
+.review-content p{
+    font-style:italic;
+} 
+.review-button-container{
+  margin-top: 10px;
+  text-align: center;
+
+}
+.review-button-container button:hover{
+    color: #014d4b;
+   
+  
+  }

@@ -1,0 +1,74 @@
+/* AuctionPage.css */
+.individual-auction-lottie{
+  background: #ff4040;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  gap: 100px;
+}
+.individual-auction-lottie-1{
+width: 500px;
+
+
+
+}
+
+.auction-page-individual {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 500px;
+    
+  }
+  
+  .bid-item-details-individual {
+    text-align: center;
+    background:linear-gradient(180deg ,#fde1ff,#eafff0 60%);
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .bid-item-image {
+    width: 300px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+  }
+  
+  .sponsor-text {
+    font-weight: bold;
+  }
+  
+  .end-time-text {
+    margin-top: 10px;
+  }
+  
+  .error-message {
+    color: red;
+  }
+  .auction-page-individual {
+    margin: 20px;
+  }
+  
+  .auction-title {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  .auction-details {
+    margin-bottom: 20px;
+  }
+  
+  .auction-detail {
+    margin-bottom: 5px;
+  }
+  .join-button{
+    color: #ffffff;
+    background: #ffb54d;
+  }
+  .sponsor-text h4{
+    color: #ff4141;
+  }

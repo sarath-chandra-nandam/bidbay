@@ -1,0 +1,39 @@
+/* SellItems.css */
+
+.sellitems-total-bid-items {
+  border: 1px solid #ddd; /* Example border */
+  padding: 10px; /* Add padding if needed */
+  margin-bottom: 20px; /* Space between items */
+  display: flex;
+  flex-direction: column; /* Ensure items stack vertically */
+}
+
+.sellitems-bid-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px; /* Space between image and details */
+}
+
+.sellitems-bid-item img {
+  max-width: 100px; /* Example size */
+  margin-right: 10px; /* Space between image and text */
+}
+
+.sellitems-bid-details {
+  display: flex;
+  flex-direction: column;
+}
+
+.bid-go-to {
+  margin-top: 10px; /* Space above the link */
+}
+
+.bid-go-to a {
+  text-decoration: none;
+  color: #007bff; /* Example link color */
+  font-weight: bold;
+}
+
+.bid-go-to a:hover {
+  text-decoration: underline; /* Underline on hover */
+}

@@ -1,0 +1,21 @@
+/* BidList.css */
+.bid-list {
+    margin: 20px;
+  }
+  
+  .bid-item {
+    padding: 10px;
+    border: 1px solid #ccc;
+    margin-bottom: 10px;
+  }
+  
+  .bid-name {
+    font-weight: bold;
+  }
+  
+  .bid-time {
+    color: #666;
+  }
+  
+  
+  

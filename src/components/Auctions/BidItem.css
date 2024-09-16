@@ -1,0 +1,64 @@
+.sell-total-bid-items{
+  display: flex;
+  flex-wrap: wrap; /* Allow items to wrap to the next line if there's not enough space */
+  justify-content: space-between; /* Adjust as needed */
+  align-items: flex-start; /* Adjust as needed */
+  justify-content: space-between;
+  gap: 20px;
+  justify-content: center;
+ 
+
+
+
+}
+.sell-bid-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+    width: 400px;
+    height: 150px;
+  }
+  
+  .sell-bid-item:hover {
+    transform: translateY(-5px);
+  }
+  
+  .sell-bid-item img {
+    width: 150px;
+    height: 150px;
+  }
+  
+  .sell-bid-details {
+    padding: 20px;
+  }
+  
+  .sell-bid-details h3 {
+    margin: 0;
+    font-size: 20px;
+    color: #333;
+  }
+  
+  .sell-bid-details p {
+    margin: 5px 0;
+    color: #666;
+  }
+  
+  .sell-bid-details a {
+    display: inline-block;
+    padding: 8px 16px;
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.3s ease-in-out;
+  }
+  
+  .sell-bid-details a:hover {
+    background-color: #0056b3;
+  }
+  

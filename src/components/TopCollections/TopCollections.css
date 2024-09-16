@@ -1,0 +1,190 @@
+.collection-card-total {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Center the cards horizontally */
+    gap: 20px; /* Add gap between cards */
+    
+  }
+  .bid-container2 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 5px;
+    
+  }
+  .collection-card {
+    width: 250px; /* Set width of each card */
+    height: 410px;
+    perspective: 1000px;
+    margin-bottom: 20px; /* Add margin between rows */
+    padding: 100px 100px;
+  }
+ 
+  
+  .collection-card .collection-card-content {
+    width: 100%;
+    height: 100%;
+    /* position: relative; */
+    transition: 1s;
+    transform-style: preserve-3d;
+    
+  }
+  
+  .collection-card:hover .collection-card-content {
+    transform: rotateY(180deg);
+  }
+  
+  /* .collection-card .collection-card-content .collection-front {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+    background: url('../../assets/product_18.png');
+    background-size: cover;
+    background-position: center;
+    padding: 60px 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    color: #fff;
+    backface-visibility: hidden;
+  }
+ */
+
+
+  .collection-front {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+    background-size: cover;
+    background-position: center;
+    padding: 60px 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    color: #fff;
+    backface-visibility: hidden;
+    background: #333;
+  }
+  
+  
+  .collection-card .collection-card-content .collection-front h2 {
+    font-weight: 500;
+  }
+  
+  .collection-card .collection-card-content .collection-front p {
+    color: #ccc;
+    font-size: 13px;
+  }
+  
+  .collection-card .collection-card-content .collection-front button {
+    width: 120px;
+    border: 1px solid #fff;
+    background: transparent;
+    border-radius: 50px;
+    padding: 8px 20px;
+    cursor: pointer;
+    margin-top: 20px;
+    color: #fff;
+  }
+  
+  .collection-card .collection-card-content .collection-back {
+    /* position: absolute; */
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+    background: #fff;
+    color: #333;
+    padding: 20px 40px;
+    transform: rotateY(180deg);
+    backface-visibility: hidden;
+  }
+  
+  .collection-card .collection-card-content .collection-back img {
+    width: 120px;
+  }
+  
+  .collection-card .collection-card-content .collection-back h1 {
+    font-size: 50px;
+    line-height: 55px;
+    margin-bottom: 10px;
+  }
+  
+  .collection-card .collection-card-content .collection-back h1 span {
+    font-weight: 400;
+  }
+  
+  .collection-card .collection-card-content .collection-back p {
+    font-size: 14px;
+  }
+  
+  .collection-card .collection-card-content .collection-back .collection-row {
+    display: flex;
+    align-items: center;
+    margin-top: 30px;
+  }
+  
+  .collection-card .collection-card-content .collection-back .collection-row .collection-col {
+    flex: 1;
+    text-align: center;
+    color: #555;
+    font-size: 12px;
+    position: relative;
+  }
+  
+  .collection-card .collection-card-content .collection-back .collection-row .collection-col::after {
+    /* position: absolute; */
+    content: "";
+    width: 1.5px;
+    height: 20px;
+    background: #4070f4;
+    top: 5px;
+    right: 0;
+  }
+  
+  .collection-card .collection-card-content .collection-back .collection-row .collection-col:last-child:after {
+    display: none;
+  }
+  
+  .collection-card .collection-card-content .collection-back .collection-row .collection-col h2 {
+    font-size: 20px;
+  }
+  
+  .collection-card .collection-card-content .collection-back .collection-row .collection-col p {
+    margin-top: 5px;
+  }
+  
+  .collection-card .collection-card-content .collection-back .collection-row button {
+    background: #4070f4;
+    color: #fff;
+    border: 0;
+    outline: 0;
+    padding: 8px 25px;
+    border-radius: 30px;
+    font-size: 14px;
+    margin-right: 15px;
+    box-shadow: 0 8px 10px rgba(120, 0, 173, 0.3);
+    cursor: pointer;
+  }
+  
+  .collection-card .collection-card-content .collection-back .collection-row a {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 5px;
+    text-decoration: none;
+  }
+  
+  .collection-card .collection-card-content .collection-back .collection-row a i {
+    color: #333;
+  }
+  

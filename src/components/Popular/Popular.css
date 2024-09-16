@@ -1,0 +1,136 @@
+
+
+.popular-bids {
+  text-align: center;
+  background: linear-gradient(180deg, #351039ad, #45fff6d4 90%);
+}
+
+.popular-bids h2 {
+  margin-bottom: 20px;
+}
+
+.bid-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 75px;
+}
+
+.bid-item {
+  /* width: calc(33.33% - 20px); */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  overflow: hidden;
+  display: flex; /* Use flexbox to align items */
+  position: relative; /* Added position relative */
+}
+
+.bid-item img {
+  width: 100%; /* Adjusted to fill the width of the container */
+  height: auto;
+  display: block;
+  border-bottom: 2px solid #f0f0f0;
+}
+
+.bid-details {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: 0.6s;
+  color: white; /* Added text color */
+  flex-direction: column; /* Added to stack items vertically */
+  padding: 20px; /* Added padding for better spacing */
+  box-sizing: border-box; /* Added to include padding in width calculation */
+}
+
+.bid-details:hover {
+  opacity: 1;
+}
+
+.bid-details h4 {
+  font-size: 30px;
+  color: #00ff84;
+  margin-bottom: 10px;
+}
+
+.bid-details p {
+  font-size: 15px;
+  font-weight: bold;
+  color: #fff;
+  margin: 0; /* Added to reset default margin */
+}
+
+.bid-details > * {
+  transform: translateY(25px);
+  transition: transform 0.6s;
+}
+
+.bid-details:hover > * {
+  transform: translateY(0px);
+}
+
+.bid-details span {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.bid-item img {
+  filter: grayscale(0%);
+  transition: 0.5s ease;
+}
+
+.bid-item img:hover {
+  transform: scale(1.1);
+  filter: grayscale(100%);
+}
+.popular-heading{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  height: 100px;
+  border-radius: 75px;
+  margin-top: 30px;
+  background:#f30000c0;
+  border-radius: 10px;
+  border-color: #00ff84;
+  color: #000000;
+  font-size: 22px;
+  font-weight: 500;
+  padding-top: 0;
+  padding: 0 500px;
+ 
+
+}  
+.popular-heading h1{
+  color: transparent;
+  -webkit-text-stroke:1px #000000;
+  font-family: sans-serif;
+  background: url('../../assets/back.png');
+  background-clip: text;
+  background-position: 0 0;
+  animation: back 20s linear infinite;
+  white-space: nowrap;
+
+}
+@keyframes back{
+  100%{
+    background-position: 2000px 0;
+  }
+}
+
+.PopularMoeny{
+  width: 60px;
+  height: 60px;
+}

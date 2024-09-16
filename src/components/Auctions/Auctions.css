@@ -1,0 +1,19 @@
+/* Auctions.css */
+.app {
+    padding: 20px;
+  }
+  
+  .navigation {
+    margin-top: 20px;
+  }
+  
+  .navigation a {
+    text-decoration: none;
+    color: blue;
+    margin-right: 10px;
+  }
+  
+  .navigation a:hover {
+    text-decoration: underline;
+  }
+ 

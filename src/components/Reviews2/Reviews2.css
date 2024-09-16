@@ -1,0 +1,164 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+/* * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+} */
+
+.main-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: #eff0f4;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+  background:#131b2d ;
+}
+.RH{
+    display: flex;
+    justify-content: center;
+}
+.RH h3{
+    color: #f8c8c8;
+    /* padding: 10px 650px; */
+    font-size: 45px;
+}
+.container {
+  position: relative;
+  max-width: 1200px;
+  width: 100%;
+  padding: 40px;
+  
+}
+
+.container .box {
+  padding: 50px 30px;
+  overflow: hidden;
+}
+
+.image img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 50%;
+  opacity: .8;
+  border: 3px solid #fff;
+}
+
+.card {
+  position: relative;
+  width: 350px;
+  height: 350px;
+  background: transparent;
+  box-shadow:
+    inset 20px 20px 20px rgba(0, 0, 0, .05),
+    5px 25px 20px rgba(0, 0, 0, .05),
+    5px 20px 30px rgba(0, 0, 0, .05),
+    inset -20px -20px 25px rgba(255, 255, 255, .9);
+  border-radius: 61% 39% 52% 48% / 44% 59% 41% 56%;
+  transition: .5s ease-in-out;
+}
+
+.card:hover {
+  border-radius: 50%;
+}
+
+.card::before {
+  content: '';
+  position: absolute;
+  top: 50px;
+  left: 65px;
+  width: 35px;
+  height: 35px;
+  background: #fff;
+  border-radius: 50%;
+  opacity: .9;
+}
+
+.card::after {
+  content: '';
+  position: absolute;
+  top: 90px;
+  left: 85px;
+  width: 15px;
+  height: 15px;
+  background: #fff;
+  border-radius: 50%;
+  opacity: .9;
+}
+
+.card .card-content {
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 30px;
+}
+
+.card-content .name-profession {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 10px;
+  color: #ffb5b5;
+}
+
+.name-profession .name {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.name-profession .profession {
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.card-content .rating {
+  display: flex;
+  align-items: center;
+  margin-top: 18px;
+}
+
+.card-content .rating i {
+  font-size: 22px;
+  color: var(--clr);
+  margin: 0 2px;
+  opacity: .75;
+}
+
+
+.box .swiper-button-next,
+.box .swiper-button-prev {
+  color: #666;
+}
+
+.box .swiper-button-next {
+  right: 0;
+}
+
+.box .swiper-button-prev {
+  left: 0;
+}
+
+.box .swiper-pagination-bullet {
+  width: 12px;
+  height: 12px;
+  background: #666;
+}
+
+
+.bx-star,
+.bxs-star {
+  font-size: 22px; /* Adjust the size of the stars */
+  color: #ccc; /* Default color for empty stars */
+  margin: 0 2px;
+}
+
+.bxs-star {
+  color: var(--clr); /* Use the color variable for filled stars */
+}

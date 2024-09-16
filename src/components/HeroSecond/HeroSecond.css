@@ -1,0 +1,125 @@
+
+
+.hero-second {
+  height: 100vh;
+  background: linear-gradient(180deg ,#ff777781 ,#ffffff 60%);
+}
+
+.hero-second-container {
+  width: 1440px;
+  min-width: 1440px;
+  margin: 0 auto;
+}
+
+.hero-second-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 24px;
+  height: 100vh;
+}
+
+.hero-second-content {
+  width: 50%;
+}
+
+.hero-second-content-inner {
+  width: 400px;
+  color: #323232;
+  margin: 0 auto;
+}
+
+.hero-second-content h1 {
+  font-weight: 500;
+  font-size: 32px;
+  margin-bottom: 24px;
+}
+
+.hero-second-content p {
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: 300;
+  padding-right: 48px;
+  margin-bottom: 56px;
+}
+
+.btn-row {
+  position: relative;
+}
+
+.btn-row:before {
+  position: absolute;
+  content: "";
+  width: 56px;
+  height: 1px;
+  background: #dfdfdf;
+  top: 50%;
+  left: -68px;
+}
+
+.btn-row button {
+  background: none;
+  border: none;
+  font-size: 12px;
+  padding: 0;
+  cursor: pointer;
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 0.7px;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.btn-row button:focus {
+  outline: none;
+}
+
+.btn-row button .arrow-icon {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #007fff;
+  height: 48px;
+  width: 48px;
+  border-radius: 100px;
+  margin-left: 16px;
+  left: 64px;
+  transform-origin: center center;
+}
+
+.hero-second-images {
+  width: 50%;
+  height: 100vh;
+  position: relative;
+}
+
+.hero-second-images-inner .hero-second-image {
+  position: absolute;
+  overflow: hidden;
+  border-radius: 100%;
+}
+
+.hero-second-images-inner .hero-second-image.girl {
+  top: 0;
+  right: 0px;
+  width: 45%;
+  height: 50%;
+}
+
+.hero-second-images-inner .hero-second-image.boy {
+  bottom: 24px;
+  left: 0px;
+  width: 52%;
+  height: 65%;
+}
+
+.hero-second-images-inner .hero-second-image img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+}

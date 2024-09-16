@@ -1,0 +1,23 @@
+[
+  { "text": "Welcome to the auction! Please let us know if you have any questions.", "sender": "Auction House" },
+  { "text": "I'm interested in the antique vase listed in the auction. Can anyone provide more details?", "sender": "JohnDoe" },
+  { "text": "Sure, the antique vase is a 19th-century piece, valued at around $2000. It’s in excellent condition.", "sender": "Auction House" },
+  { "text": "What is the starting bid for the vase?", "sender": "JaneSmith" },
+  { "text": "The starting bid for the vase is $500.", "sender": "Auction House" },
+  { "text": "I’d like to place a bid of $550 on the vase.", "sender": "JohnDoe" },
+  { "text": "Noted, JohnDoe. Your bid of $550 is now the highest.", "sender": "Auction House" },
+  { "text": "Is there a reserve price for this item?", "sender": "SarahLee" },
+  { "text": "Yes, the reserve price for the vase is $1500.", "sender": "Auction House" },
+  { "text": "I will increase my bid to $600.", "sender": "JohnDoe" },
+  { "text": "Thank you, JohnDoe. Your bid of $600 is now the highest.", "sender": "Auction House" },
+  { "text": "I’m considering placing a bid, but I want to know more about the auction house’s credibility.", "sender": "MichaelBrown" },
+  { "text": "We’ve been in the auction business for over 30 years and have a solid reputation. Feel free to check our reviews online.", "sender": "Auction House" },
+  { "text": "I’m placing a bid of $1000 on the vase.", "sender": "JaneSmith" },
+  { "text": "JaneSmith’s bid of $1000 is now the highest. Remember, the auction will end in 15 minutes.", "sender": "Auction House" },
+  { "text": "Can you provide details on how to finalize the payment once the auction is over?", "sender": "MichaelBrown" },
+  { "text": "Once the auction ends, the winning bidder will receive instructions on payment and collection. We accept various payment methods.", "sender": "Auction House" },
+  { "text": "Thank you for the information. I’ll decide on my final bid soon.", "sender": "MichaelBrown" },
+  { "text": "No problem! If you have any other questions, just ask.", "sender": "Auction House" },
+  { "text": "I’d like to place a final bid of $1200 on the vase.", "sender": "JaneSmith" },
+  { "text": "JaneSmith’s final bid of $1200 is now the highest and winning. The auction is now closed. Congratulations, JaneSmith!", "sender": "Auction House" }
+]
